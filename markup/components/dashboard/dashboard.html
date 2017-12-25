@@ -1,0 +1,33 @@
+<div class="dashboard">
+	<div class="dashboard__header row">
+		<div class="contant-title">@ABHISEK.DAS</div>
+		<button class="btn" data-toggle="modal"  data-target="#addSocialModal">+ Add Social Profile</button>
+	</div>
+	<div class="tabs row">
+		<div class="tabs__item active">Last day</div>
+		<div class="tabs__item">Week</div>
+		<div class="tabs__item">Month</div>
+	</div>
+	<div class="dashboard__items row">
+		{{#each dashboardItem }}
+		<a class="dashboard__item" href="{{ this.link }}">
+			<div class="social-box {{ this.social_class }}">
+				<div class="social-box__follower">
+					<p class="social-box__follower-count">{{ this.follower_count }}</p>
+					<p class="social-box__follower-text">follower</p>
+				</div>
+				<p class="social-box__stats {{ this.stats_class }}">{{ this.stats }}</p>
+			</div>
+			<div class="user-info">
+				<div class="user-photo" style="background-image: url({{ this.user_img }});"></div>
+				<div class="col-auto">
+					<div class="user-social">{{ this.user_social }}</div>
+					<div class="user-link">{{ this.user_link }}</div>
+				</div>
+			</div>
+		</a>
+		{{/each}}
+		
+	</div>
+	
+</div>
