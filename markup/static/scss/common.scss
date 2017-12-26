@@ -55,6 +55,9 @@ body {
 	color: #333333;
 	font-family: 'Roboto', sans-serif;
 }
+.hidden {
+	visibility: hidden;
+}
 .page {
 	position: fixed;
 	height: 100%;
@@ -76,10 +79,12 @@ body {
 	border: 1px solid #1CAF5E;
 	border-radius: 4px;
 	padding: 0 16px;
+	transition: 0.3s ease;
 }
 .btn:hover,
 .btn:focus {
-	transform: scale(1.2,1.2); 
+	transform: scale(1.2,1.2);
+	transition: 0.3s ease;
 }
 .full-btn {
 	color: #fff;
@@ -89,10 +94,14 @@ body {
 	min-width: 117px;
 }
 .contant {
-	padding: 68px 0 0;
+	padding-top: 68px;
+	padding: 5vh 0 0;
     margin-top: $header-height;
 	width: calc(100% - #{$sidebar-width});
 	overflow-y: auto;
+	@media ($medium) {
+		width: 100%;
+	}
 }
 .tabs {
 	&__item {
@@ -118,10 +127,16 @@ body {
 }
 .modal {
 	&-dialog {
+		width: 600px;
 		margin: 115px auto;
+		@media  ($small) {
+			width: 400px;
+		}
+		@media  ($xsmall) {
+			width: 90%;
+		}
 	}
 	&-content {
-		width: 600px;
 		padding: 25px;
 	}
 	&-title {
@@ -149,4 +164,24 @@ body {
 .form-control::placeholder
  {
   color: #B6B6B6;
+}
+input.error {
+	box-shadow: 0 0 4px 1px #dc3d4d;
+}
+.error-mess {
+	position: absolute;
+    margin: 10px 15px;
+    color: #dc3d4d;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px 1px #dc3d4d;
+    &:before {
+    	content: '';
+    	position: absolute;
+    	top: -8px;
+    	display: block;
+    	border-bottom: 8px solid  rgba(220, 61, 77, 0.62);;
+    	border-right: 8px solid transparent;
+    	border-left: 8px solid transparent;
+    }
 }

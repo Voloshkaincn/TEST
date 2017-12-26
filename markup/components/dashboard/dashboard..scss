@@ -2,19 +2,35 @@
 	width: 950px;
 	margin: 0 auto;
 	padding: 0 15px;
+	@media ($xlarge){
+		width: 700px;
+	}
+	@media ($small){
+		width: 450px;
+	}
+	@media ($xsmall){
+		width: 250px;
+	}
+	&__items {
+		margin-right: -40px;
+    	margin-left: -40px;
+    	@media ($xsmall){
+			justify-content: center;
+		}
+	}
 	&__item {
-		margin-bottom: 25px;
-		+ .dashboard__item {
-			margin-left: 50px;
-		}
-		&:nth-child(#{$dashboard-column}n + 1){
-			margin-left: 0;
-		}
+		margin: 0 25px 25px;
 	}
 	&__header {
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 20px;
+		@media ($xsmall){
+			justify-content: center;
+			.btn {
+				margin-top: 10px;
+			}
+		}
 	}
 	.tabs {
 		margin-bottom: 30px;
@@ -102,9 +118,8 @@
 		}
 	}
 	&.instagram {
-		background: url(../img/assets/dashboard/instagram-bg.svg);
+		background: url(../img/assets/dashboard/instagram-bg.jpg);
 		background-size: cover;
-		background-position: top;
 		&:before {
 			background: url(../img/assets/dashboard/instagram.svg);
 

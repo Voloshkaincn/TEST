@@ -1,5 +1,11 @@
 // File for scss-vars.
 // For example: main colors, paddings and so on.
+$xxlarge: 'max-width: 1440px';
+$xlarge: 'max-width: 1280px';
+$xmedium: 'max-width: 1024px';
+$medium: 'max-width: 991px';
+$small: 'max-width: 767px';
+$xsmall: 'max-width: 499px';
 $sidebar-width: 240px;
 $header-height: 70px;
-$dashboard-column: 4;
+

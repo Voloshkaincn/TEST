@@ -9,4 +9,8 @@
 	a:focus {
 		text-decoration: underline;
 	}
+	@media (max-height: 900px) {
+		margin-top: 0;
+		padding: 10px 0 5px;
+	}
 }

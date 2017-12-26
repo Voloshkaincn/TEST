@@ -204,7 +204,7 @@ module.exports = {
      * Use archiver for your build
      * @type {Boolean}
      */
-    useArchiver: true,
+    useArchiver: false,
 
     /**
      * Set ulimit. Topical for Linux-family OS and OSX.

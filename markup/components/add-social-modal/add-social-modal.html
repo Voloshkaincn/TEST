@@ -9,9 +9,12 @@
       <form id="addSocialForm">
         <div class="form-group">
           <label for="addUrl">URL</label>
-          <input class="form-control" id="addUrl" type="text" name="url" placeholder="https://twitter.com/username">
+          <input class="form-control required" id="addUrl"
+          data-text-required="this field is required"
+          data-text-reg="this url is not correct"
+          type="text" name="url" placeholder="https://twitter.com/username">
         </div>
-        <button class="full-btn">Lookup</button>
+        <button id="submit" class="full-btn">Lookup</button>
       </form>
     </div>
   </div>
