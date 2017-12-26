@@ -2,6 +2,7 @@ dashboard: {
 	dashboardItem: [
 	{
 		link: 'facebook.com',
+		date: '11.28.2017',
 		social_class: 'facebook',
 		follower_count: '1,701',
 		stats_class: 'up',
@@ -12,6 +13,7 @@ dashboard: {
 	},
 	{
 		link: 'Twitter.com',
+		date: '11.29.2017',
 		social_class: 'twitter',
 		follower_count: '1,567',
 		stats_class: 'down',
@@ -22,6 +24,7 @@ dashboard: {
 	},
 	{
 		link: 'Instagram.com',
+		date: '12.20.2017',
 		social_class: 'instagram',
 		follower_count: '1,139',
 		stats_class: 'up',
@@ -32,6 +35,7 @@ dashboard: {
 	},
 	{
 		link: 'LinkedIn.com',
+		date: '12.21.2017',
 		social_class: 'linked-in',
 		follower_count: '1,567',
 		stats_class: 'up',
@@ -42,6 +46,7 @@ dashboard: {
 	},
 	{
 		link: 'YouTube.com',
+		date: '12.26.2017',
 		social_class: 'youtube',
 		follower_count: '3.190',
 		stats_class: 'up',
@@ -52,6 +57,7 @@ dashboard: {
 	},
 	{
 		link: 'Snapchat.com',
+		date: '12.26.2017',
 		social_class: 'snapchat',
 		follower_count: '8,754',
 		stats_class: '',
@@ -62,6 +68,7 @@ dashboard: {
 	},
 	{
 		link: 'Google+.com',
+		date: '12.01.2017',
 		social_class: 'google-plus',
 		follower_count: '1,392',
 		stats_class: '',
@@ -72,6 +79,7 @@ dashboard: {
 	},
 	{
 		link: 'vine.com',
+		date: '12.10.2017',
 		social_class: 'vine',
 		follower_count: '1,045',
 		stats_class: '',

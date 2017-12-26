@@ -4,13 +4,13 @@
 		<button class="btn" data-toggle="modal"  data-target="#addSocialModal">+ Add Social Profile</button>
 	</div>
 	<div class="tabs row">
-		<div class="tabs__item active">Last day</div>
-		<div class="tabs__item">Week</div>
-		<div class="tabs__item">Month</div>
+		<div id="lastDay" class="tabs__item">Last day</div>
+		<div id="week" class="tabs__item">Week</div>
+		<div id="month" class="tabs__item">Month</div>
 	</div>
 	<div class="dashboard__items row">
 		{{#each dashboardItem }}
-		<a class="dashboard__item" href="{{ this.link }}">
+		<a class="dashboard__item" href="{{ this.link }}" data-date="{{ this.date }}">
 			<div class="social-box {{ this.social_class }}">
 				<div class="social-box__follower">
 					<p class="social-box__follower-count">{{ this.follower_count }}</p>

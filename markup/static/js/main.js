@@ -18,18 +18,6 @@ jQuery(document).ready(function($) {
 		};	
 	};
 
-	function expand() {
-		$(".search-btn").toggleClass("close");
-		$(".search-form").toggleClass("active");
-		$(".search-input").toggleClass("square");
-		if ($('.search-btn').hasClass('close')) {
-			$('.search-input').focus();
-			} else {
-			$('.search-input').blur();
-		}
-	}
-	$('.search-btn').on('click', expand);
-
 
 	$('#submit').on('click', function(){
 		$('.error').removeClass('error');
@@ -61,6 +49,53 @@ jQuery(document).ready(function($) {
 		$('.tabs__item').removeClass('active');
 		$(this).addClass('active');
 	});
+
+	$('#lastDay').click(function(){
+		$('.dashboard__item').each(function(){
+			var max_date;
+			var date = new Date($(this).data('date'));
+			var today = new Date();
+			console.log(date);
+			console.log($(this));
+
+			if (date < today.setDate(today.getDate()-1) ) {
+				$(this).hide();
+			} else {
+				$(this).show();
+			};
+		});
+	});
+	$('#week').click(function(){
+		$('.dashboard__item').each(function(){
+			var max_date;
+			var date = new Date($(this).data('date'));
+			var today = new Date();
+			console.log(date);
+			console.log($(this));
+
+			if (date < today.setDate(today.getDate()-7) ) {
+				$(this).hide();
+			} else {
+				$(this).show();
+			};
+		});
+	});
+	$('#month').click(function(){
+		$('.dashboard__item').each(function(){
+			var max_date;
+			var date = new Date($(this).data('date'));
+			var today = new Date();
+			console.log(date);
+			console.log($(this));
+
+			if (date < today.setMonth(today.getMonth()-1) ) {
+				$(this).hide();
+			} else {
+				$(this).show();
+			};
+		});
+	});
+
 
 
 });
