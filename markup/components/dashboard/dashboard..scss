@@ -79,10 +79,10 @@
 			bottom: 1px;
 		}
 		&.up:after {
-			background: url(../img/assets/dashboard/stats-arrow.svg);
+			background-image: url(../img/assets/dashboard/stats-arrow.svg);
 		}
 		&.down:after {
-			background: url(../img/assets/dashboard/stats-arrow.svg);
+			background-image: url(../img/assets/dashboard/stats-arrow.svg);
 			transform: rotate(180deg);
 		}
 	}
@@ -95,61 +95,62 @@
 		top: 20px;
 		left: 20px;
 		background-repeat: no-repeat;
+		background-size: contain;
 	}
 	&.facebook {
 		background: linear-gradient(180deg, #39579A 0%, #2C4479 97.23%), #39579A;
 		&:before {
-			background: url(../img/assets/dashboard/facebook.svg);
+			background-image: url(../img/assets/dashboard/facebook.svg);
 
 		}
 	}
 	&.twitter {
 		background: linear-gradient(180deg, #059FF5 0%, #059FC3 100%), #059FF5;
 		&:before {
-			background: url(../img/assets/dashboard/twitter.svg);
+			background-image: url(../img/assets/dashboard/twitter.svg);
 
 		}
 	}
 	&.google-plus {
 		background: linear-gradient(180deg, #F93F2D 0%, #C73F2D 100%), #F93F2D;
 		&:before {
-			background: url(../img/assets/dashboard/googlePlus.svg);
+			background-image: url(../img/assets/dashboard/googlePlus.svg);
 
 		}
 	}
 	&.instagram {
-		background: url(../img/assets/dashboard/instagram-bg.jpg);
+		background-image: url(../img/assets/dashboard/instagram-bg.jpg);
 		background-size: cover;
 		&:before {
-			background: url(../img/assets/dashboard/instagram.svg);
+			background-image: url(../img/assets/dashboard/instagram.svg);
 
 		}
 	}
 	&.linked-in {
 		background: linear-gradient(180deg, #007EBB 0%, #007E9D 98.51%), #007EBB;
 		&:before {
-			background: url(../img/assets/dashboard/linkedIn.svg);
+			background-image: url(../img/assets/dashboard/linkedIn.svg);
 
 		}
 	}
 	&.snapchat {
 		background: linear-gradient(180deg, #FFFE00 0%, #F3F200 96.43%), #FFFE00;
 		&:before {
-			background: url(../img/assets/dashboard/snapchat.svg);
+			background-image: url(../img/assets/dashboard/snapchat.svg);
 
 		}
 	}
 	&.vine {
 		background: linear-gradient(180deg, #00B687 0%, #008E87 100%), #00B687;
 		&:before {
-			background: url(../img/assets/dashboard/vine.svg);
+			background-image: url(../img/assets/dashboard/vine.svg);
 
 		}
 	}
 	&.youtube {
 		background: linear-gradient(180deg, #CE1312 0%, #B01312 100%), #CE1312;
 		&:before {
-			background: url(../img/assets/dashboard/youtube.svg);
+			background-image: url(../img/assets/dashboard/youtube.svg);
 
 		}
 	}
