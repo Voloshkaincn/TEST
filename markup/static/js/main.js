@@ -1,4 +1,9 @@
 jQuery(document).ready(function($) {
+	var ie = false;
+	if (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) {
+	    ie = true;
+	}
+
 	$(".hamburger").click(function(){
 	    $(this).toggleClass("is-active");
 	    $('.sidebar ').toggleClass("is-active");
@@ -48,52 +53,40 @@ jQuery(document).ready(function($) {
 	$('.tabs__item').click(function(){
 		$('.tabs__item').removeClass('active');
 		$(this).addClass('active');
-	});
-
-	$('#lastDay').click(function(){
+		var tab = $(this).attr('id');
+		var today = new Date();
+		var limitDays;
+		if (tab == 'lastDay') {
+			limitDays = today.setDate(today.getDate()-1);
+		};
+		if (tab == 'week') {
+			limitDays = today.setDate(today.getDate()-7);
+		}
+		if (tab == 'month') {
+			limitDays = today.setMonth(today.getMonth()-1);
+		}
 		$('.dashboard__item').each(function(){
-			var max_date;
-			var date = new Date($(this).data('date'));
-			var today = new Date();
-			console.log(date);
-			console.log($(this));
+			if (ie) {
+				var strDate = $(this).data("date");
+				var regex = /^(\d{2}).(\d{2}).(\d{4})/;
+				var regexResult = strDate.match(regex);
+				var date = new Date(regexResult[3]+"/"+regexResult[1]+"/"+regexResult[2]);
+			} else {
 
-			if (date < today.setDate(today.getDate()-1) ) {
+				var date = new Date($(this).data("date"));
+			};
+			if (date < limitDays) {
 				$(this).hide();
 			} else {
 				$(this).show();
 			};
 		});
 	});
-	$('#week').click(function(){
-		$('.dashboard__item').each(function(){
-			var max_date;
-			var date = new Date($(this).data('date'));
-			var today = new Date();
-			console.log(date);
-			console.log($(this));
 
-			if (date < today.setDate(today.getDate()-7) ) {
-				$(this).hide();
-			} else {
-				$(this).show();
-			};
-		});
-	});
-	$('#month').click(function(){
-		$('.dashboard__item').each(function(){
-			var max_date;
-			var date = new Date($(this).data('date'));
-			var today = new Date();
-			console.log(date);
-			console.log($(this));
 
-			if (date < today.setMonth(today.getMonth()-1) ) {
-				$(this).hide();
-			} else {
-				$(this).show();
-			};
-		});
+	$('#addSocialForm').submit(function(){
+
+
 	});
 
 
